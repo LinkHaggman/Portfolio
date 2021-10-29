@@ -1,0 +1,100 @@
+  <!-- META: Innehåller meta, extern stildokument, länk till google fonts och titel bland annat.-->
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="analys.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>Link Häggman</title>
+  </head>
+  <body>
+
+    <!--SIDHUVUD: Logo/titel som syns högst upp på webbsidan-->
+    <header>
+        <h1 class="logo">👨‍💻 Link Häggman</h1>
+
+          <!-- MENY: Här är en meny med länkar till olika sidor inom webbsidan.-->
+          <nav>
+            <ul>
+           <li><a href="index.html">🏠 Hem</a></li>
+          <li><a href="portfolio.html">📁 Portfolio</a></li>
+          <li><a href="analys.html">📋 Analys</a></li>
+          </ul>
+      </nav>
+  
+    </header>
+
+ <!--LISTA: Lista med text som lyfter fram punkter om webbsidan-->
+    <div class="intro">
+      <ul style="list-style-type:none;">
+        <li><h1>🖥️ Webbsidor</h1></li>
+        <li><h1>📱 Webbappar</h1></li>
+        <li><h1>🎮 Datorspel</h1></li>
+      </ul>
+    </div>
+
+      <!-- HUVUDDEL: Huvuddelen av webbsidan, här finns tre rader med kolumner som alla innehåller bilder och text. -->
+      <main>
+          <div class="rows">
+            <div class="col">
+              <h2>Processanalys</h2>
+              <p>Denna processanalys utgår från examinationsuppgiften som bestod av att skapa en responsiv webbplats. Till denna webbplats fick man använda sig av en mall som visade ett exempel på hur webbplatsens struktur kunde se ut. Syftet med denna analys är att förklara processen och orsaken till val av koder.</p>
+              <br>
+
+              <h3>Dator versionen</h3>
+              <p>Till denna uppgift började jag med att studera mallen som man fått. Efter det började jag med datorversionen av webbplatsen. Detta för att sedan optimera datorversionen till att fungera på mobiler. Först skapade jag en html-fil som skulle innehålla strukturen för framsidan för webbplatsen. Sedan meta innehållet som behövdes till denna webbplats. 
+                Meta innehöll vilket dokumenttyp detta är dvs html och anger vilket teckenkodningen som behövs till dokumentet. 
+                I HTML & CSS QuickStart Guide skriver DuRocher (2021, s. 92-93): <em>"In our example we select UTF-8, which includes characters you’ll find in most European languages like English, Spanish, German, French and Portuguese.”</em> Hade jag behövt ett icke europeisk språk hade jag kunnat välja en annan teckenkodningen dock behövdes det inte i detta fall. I meta sektionen skrev jag även länk till extern css. Att separera html och css gör det enklare att sortera innehållet som ska vara i webbplatsen. Sedan skrev jag viewport, länkade till extern fonts Google Fonts samt skrev in en titel för webbsidan.
+</p>
+<p>Till sidans bakgrund använde jag mig av background-image tillsammans med linear-gradient i css för att få en bakgrund med övertoning. Detta för att få texten som var ovan att synas tydligare. Hur man gör en övertoning beskrivs av (W3Schools, 2021): <em>“To create a linear gradient you must define at least two color stops. Color stops are the colors you want to render smooth transitions among. You can also set a starting point and a direction (or an angle) along with the gradient effect.”</em> Genom att göra detta kunde jag få en övertoning på bakgrundsbilden.</p>
+
+<p>Efter det började jag med sidhuvudet. I detta sidhuvud gjorde jag en logo med rubrik. H1 taggen användes eftersom det är den första rubriken på sidan och en klass lades till för att sedan kunna anpassa loggan och texten med CSS. Sedan skrev jag en meny med tre punkter. I HTML & CSS QuickStart Guide påpekar dock DuRocher att <em>"In HTML, we designate list in two ways. For numbered, or “ordered,” lists we use the ol tags to specify the beginning and ending of the list. For simple “unordered” lists (such as those with bullet points), we use ul."</em> (2021, s. 106). Jag kunde ha valt en numrerad eller punktlista men emojis som jag använde fungerade som ett alternativ till punkter så därför valde jag en oordnad lista. Vilket jag även använde på listan under menyn. I CSS skrev jag bland annat höjd och bredd på huvudet samt gjorde den undre listans typsnitt till "Press Start 2P" länkat från Google fonts.</p>
+
+<p>Därefter gjorde jag huvuddelen av webbsidan. Denna huvuddel består av rader, kolumner, bilder och text. Jag använde mig av olika klasser och id för att kunna anpassa med hjälp av css. För att göra kolumner och rader bredvid varandra finns olika alternativ. Tre av dem är float, grid och flexbox. I HTML & CSS QuickStart Guide skriver DuRocher om flexbox (2021, s. 210): <em>“This model allows for layout without using floats or relative positioning, thereby avoiding the dreaded overlap issues associated with these techniques.”</em>
+  Alla tre kan användas för att positionera objekt men bör användas mest praktiskt på olika sätt. Floats används oftast till att positionera text och bilder. Flex är för enriktad (horisontell eller vertikal) positionering av element inuti enstaka rader eller kolumner. Medan grid är för att lägga ut element i båda riktningarna vilket används vanligtvis bäst för sidlayout. Att använda floats kan leda till problem så att använda antingen flex eller grid till layouter är att föredra. Jag använde mig därför av grid istället för floats till huvuddelen.</p>
+<p>
+  Sedan gjorde jag sidfot med kontaktuppgifter. Med hjälp av floats och bredd kunde jag göra text som var på vänster och höger sida samt i mitten. I HTML & CSS QuickStart Guide skriver DuRocher (2021, s. 206): “The inline-block value defines the display layout as a hybrid of the block and inline styles.” Detta kan jämföras med block då de staplas vertikalt ovanpå varandra och medan inline inte skapat boxar utan är bredvid varandra. På så sätt med hjälp av inline-block kunde jag i detta fall få ett block som låg emellan två floats.</p>
+              <br>
+              <h3>Responsiva versionen</h3>
+<p>
+  Nu när jag gjort klart dator versionen var det tid att göra de responsiva versionerna av webbplatsen. Detta med hjälp av media queries som det beskrivs av (W3Schools, 2021): <em>“With media queries we can assign different rules to various screen sizes.”</em> Vilket jag behövde använde mig av för att anpassa till mobiler med olika skärmstorlekar men även utskrift versionen.
+  Så genom att veta om media queries funktioner började jag med tablet versionen. Med hjälp block och inline-block gjorde jag så att objekt hamnade på rad under varandra. För att få rubrikerna utan mellanslag använde jag mig av white-space: nowrap. Det beskrivs av (W3Schools, 2021): <em>“Sequences of white-space will collapse into a single whitespace. Text will never wrap to the next line. The text continues on the same line until a <br> tag is encountered”.</em>
+  </p>
+<p>Efter det gjorde jag anpassningar för mobiler med större skärmar. Här ändrade jag typsnitt storlekar och gjorde mindre positions anpassningar på grund av mobil skärmens storlek. Här fick jag även använde mig av !important. Det beskrivs av (W3Schools, 2021): <em>"The !important rule in CSS is used to add more importance to a property/value than normal”.</em> För att få detta kommando att tolkas rätt behövdes därför !important skrivas in. På övriga mobil storlekar gjorde jag även där anpassningar i teckenstorlekar och positionering.</p>
+<br>
+<h3>Utskrift versionen</h3>
+
+<P>Efter att blivit klar med den responsiva delen började jag med utskrift versionen av webbplatsen. Istället för media screen använder man media print för att påverka hur utskrift versionen kommer att se ut. Jag bort element som inte behövdes såsom bakgrund och meny. Jag ordnande även små ändringar för att få text och kolumner att rymmas i pappersformat.</P>
+<p>Så genom att använda mig av litteratur och tidigare kunskap lyckades jag göra en webbsida baserat på mallen som gavs till denna uppgift.</p>
+<br>
+<h4>Referenslista:</h4>
+<p>DuRocher, D. 2021. <em>HTML & CSS QuickStart Guide: The Simplified Beginners Guide to Developing a Strong Coding Foundation, Building Responsive Websites, and Mastering the Fundamentals of Modern Web Design.</em> [E-book]. Available through: Google Play Books https://play.google.com/store/books [Accessed on 18 September 2021]</p>
+
+<p>W3schools (u.å.). <em>CSS linear-gradient() Function.</em> [Elektronisk].Tillgänglig: https://www.w3schools.com/cssref/func_linear-gradient.asp [2021-09-20].</p>
+
+<p>W3schools (u.å.). <em>CSS The !important Rule.</em> [Elektronisk].Tillgänglig: https://www.w3schools.com/css/css_important.asp [2021-09-24].</p>
+
+</div>
+          </div>
+      </main>
+
+    <!-- SIDFOT: I denna sidfot finns kontakt uppgifter. -->
+    <footer>
+
+    <div class="footer">
+    <small class="left"> <strong>Adress</strong>
+    <br /><br />Kungsgatan 108
+    <br />90332 Umeå</small>
+
+    <small class="right"> <strong>Telefon</strong>
+      <br /><br />0702815540</small>
+
+    <small class="centered"><strong>E-Post</strong>
+      <br /><br />linkhaggman@gmail.com</small>
+      </div>
+    </footer>
+  </body>
+</html>

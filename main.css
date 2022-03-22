@@ -1,0 +1,393 @@
+
+/***************GENERELT: Detta innehåller sånt som påverkar hela webssidan eller på flera ställen samtidigt. Till exmepel att få alla länkar i en viss färg m.m***************/
+
+html, body {
+  color: #434242;
+  font-family: sans-serif;
+  font-size: 100%;
+  background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url("imgs/BG.png");
+  background-size: cover;
+  margin:0;
+padding:0;
+overflow-x: hidden;
+}
+
+.wrapper {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+li {
+  padding: 0 1.25rem;
+}
+
+p,
+li {
+  font-family: sans-serif;
+  color: rgb(0, 0, 0);
+  text-align: left;
+}
+
+a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+small  {
+  color:white;
+}
+.citat {
+  font-style: italic;
+}
+
+/***************SIDHUVUD: Innehåll som påverkar element inom sidhuvudet. Hur hög sidhuvudet ska vara och introduktion listans placering bland annat. 
+Här har jag också valt att ha google font typsnintten "Press Start 2P" i listorna.***************/
+
+header {
+  align-items: center;
+  display: flex;
+  height: 4.0625rem;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.logo {
+  margin-left: 50px;
+  display: inline;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: white;
+}
+
+nav {
+  margin-right: 25px;
+  
+}
+
+header li {
+  font-weight: 300;
+  display: inline;
+}
+
+.intro {
+  float: right;
+  margin-top: 100px;
+  margin-right: 300px;
+}
+.intro li {
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 10px;
+  font-family: "Press Start 2P", sans-serif;
+}
+
+
+/***************HUVUDDEL: Innehåll som påverkar element inom huvuddelen, ändrar storlek på bilder och justerar placering m.m***************/
+
+main {
+  align-items: center;
+background-color: rgb(230, 230, 230);
+  display: grid;
+  height: auto;
+  justify-content: center;
+  margin-top: 30rem;
+  position: relative;
+  text-align: center;
+  padding-bottom: 50px;
+  padding-top: 5px;
+}
+
+img {
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 100%;
+  margin: -80px auto 0 ;
+  border: 10px solid white;
+}
+
+#leftpic
+{
+  margin-right: 50%;
+}
+
+#rightpic
+{
+  margin-left: 25%;
+}
+
+h2 {
+  font-size: 25px;
+  font-weight: normal;
+}
+
+.rows {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 2%;
+  margin-top: 25px;
+  margin-right: 80px;
+  margin-left: 80px;
+}
+
+.col {
+  border: 1px solid lightgrey;
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+}
+
+
+/***************SIDFOT: Här kan man se hur med hjälp av floats och inline-block kan få tre lika stora kolumner bredvid varandra***************/
+
+footer {
+  height: 8rem;
+  margin-top: 4rem;
+  margin-left: 250px;
+}
+
+.left{
+  float: left;
+  width: 33.333%;
+  }
+
+.right{
+    float: right;
+    width: 33.333%;
+}
+
+.centered{
+    display: inline-block;
+    width: 33.333%;
+}
+
+/***************MEDIA QUERIES***************/
+
+
+
+/***************LAPTOP: Här är anpassingar för att få webbsidan att fungera i laptop skärmstorlek. Bilder behöver förminskas.***************/
+
+@media only screen and (max-width: 1024px) {
+
+  #rightpic
+  {
+    margin-left: 20%;
+  }
+
+  #leftpic
+  {
+    margin-left: -20%;
+  }
+  img
+  {
+    width: 90%;
+    height: 15%;
+  }
+}
+
+/***************LÄSPLATTA: På grund av bytet mellan horisontell till vertikal skärm så behövs flera justeringar. 
+Kolumnerna ändras till att hamna under varandra istället för bredvid. Sidfoten blir transperant och hänger med om man scrollar.
+Mellanrum och placering behövs också ändras m.m.***************/
+
+@media only screen and (max-width: 768px) {
+
+  
+  h3{
+    text-align: center;
+      }
+      
+  img {
+    width: 40%;
+    height: 5%;
+  }
+  
+  .rows {
+    display: inline-block;
+  }
+
+  .col {
+    margin-bottom: 20%; 
+  }
+
+  #leftpic {
+    margin: auto;
+    margin-top: -15%;
+  }
+
+  #rightpic {
+    margin: auto;
+    margin-top: -15%;
+  }
+
+  footer {
+    margin-left: 15%;
+  }
+
+  .logo {
+    white-space: nowrap;
+    margin: 0;
+    padding-left: 30%;
+    text-align: center;
+    width: 100%;
+  }
+
+  header {
+    padding-top: 5%;
+    display: block;
+  }
+
+  nav {
+    white-space: nowrap;
+    display: block;
+    text-align: center;
+    padding-top: 5%;
+  }
+
+  header li {
+    margin: 0;
+    text-align: center;
+    overflow: hidden;
+    font-size: 25px;
+  }
+
+  .intro {
+    margin: 0;
+    padding-top: 120px;
+    text-align: center;
+    width: 100%;
+    padding-right: 5%;
+  }
+
+  .footer {
+    position: fixed;
+    bottom: -1px;
+    width: 100%;
+    background:rgba(0,0,0,0.8);
+    margin-left: -115px;
+    padding-left: 10%;
+    padding-bottom: 2%;
+    padding-top: 2%;
+  }
+  }
+
+/***************STOR MOBIL: Anpassingar för mobiler med större skärmar. Precis som förut behövs saker minskas och flyttas för att rymmas***************/
+@media only screen and (max-width: 425px) {
+  
+  img {
+    width: 70%; 
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+    
+  header li {
+    font-size: 15px;
+  }
+
+  .footer {
+    margin-left: -50px;
+  }
+
+  footer {
+    font-size: 80%;
+    margin: 8px;
+    padding-left: 5px;
+    text-align: center;
+  }
+
+.intro {
+    font-size: 70%;
+    padding-right: 5%;
+  }
+
+.col {
+    margin-bottom: 40%;
+}
+
+.rows {
+   margin: 5%;
+
+ }
+}
+
+/***************MEDELSTOR MOBIL: Vissa ändringar i textstorlek för att få mobiler med medelstor skärm att visa webbsidan på ett tydligt sätt.***************/
+@media only screen and (max-width: 375px) {
+    
+  header li {
+    font-size: 80%;
+  }
+
+  .logo {
+    font-size: 95%;
+  }
+  }
+
+/***************LITEN MOBIL: Mobiler med små och avlånga skärmar, text behöver bli i mindre storlek och sidfoten behöver justeras en aning***************/
+@media only screen and (max-width: 320px) {
+
+  header li {
+    font-size: 60%;
+  }
+
+  footer {
+    font-size: 70%;
+  }
+
+  .footer {
+    margin-left: -40px;
+  }
+  }
+
+/***************UTSKRIFT VERSIONEN: Här tas element som inte är viktigt i utskrift evrsionen bort till exempel backgrundsbild och meny.
+Text som är vit måste även byta färg till svart bland annat.***************/
+
+@media print {
+              
+  * {
+    background-color: white;
+  } 
+              
+  nav {
+    display: none; 
+  }
+
+  small  {
+    color:black;
+  }
+  .rows  {
+    width: 80%;
+    padding-right: 20%;
+  }
+
+  .col {
+    border: none;
+  }
+
+  .logo {
+    color: black;
+    white-space: nowrap;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  .intro li{
+    color: black;
+    font-family: sans-serif;
+    padding-right: 2cm;
+    margin-top: -1cm;
+  }
+
+  main {
+  background-color: rgb(255, 255, 255);
+  }
+
+  #rightpic {
+    margin: auto;
+    margin-top: -2cm;
+  }
+  footer {
+    padding-right: 4cm;
+  }
+  }
+
